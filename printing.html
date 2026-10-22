@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2A4D8F">
+  <title>الطباعة السريعة | Smart Uni Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .printing-page {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 24px;
+    }
+    .printing-hero {
+      background: linear-gradient(135deg, #2A4D8F, #173466);
+      color: white;
+      padding: 32px 22px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .printing-hero h1 { margin-top: 0; }
+    .printing-hero p { line-height: 1.9; }
+    .printing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+      margin: 24px 0;
+    }
+    .printing-card {
+      background: #F2F2F2;
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .printing-card h2 { color: #2A4D8F; font-size: 20px; }
+    .printing-form {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+    }
+    .printing-form label { font-weight: bold; }
+    .printing-form input,
+    .printing-form select,
+    .printing-form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      margin-top: 7px;
+      border: 1px solid #bbb;
+      border-radius: 9px;
+      background: white;
+      font: inherit;
+    }
+    .printing-button {
+      padding: 13px 20px;
+      background: #C9A86A;
+      color: #1A1A1A;
+      border: 0;
+      border-radius: 10px;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .printing-note { color: #555; font-size: 14px; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store
+        <small>متجر الجامعة الذكي</small>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة"
+      aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="offers.html">الباقات والعروض</a>
+      <a href="box.html">صندوق الطالبة</a>
+      <a href="printing.html">الطباعة السريعة</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main class="printing-page">
+    <section class="printing-hero">
+      <div style="font-size:56px;">🖨️</div>
+      <h1>الطباعة السريعة</h1>
+      <p>
+        خدمة مقترحة لتسهيل تجهيز المذكرات والملفات الدراسية
+        والمشاريع الجامعية في مكان واحد.
+      </p>
+    </section>
+
+    <section class="printing-grid">
+      <article class="printing-card">
+        <h2>📄 طباعة مستندات</h2>
+        <p>لطباعة الملخصات والواجبات والمستندات الدراسية.</p>
+      </article>
+      <article class="printing-card">
+        <h2>📚 مذكرات ومحاضرات</h2>
+        <p>تجهيز المحاضرات والمراجعات بطريقة مرتبة.</p>
+      </article>
+      <article class="printing-card">
+        <h2>🎓 مشاريع جامعية</h2>
+        <p>خيار مقترح لطباعة التقارير والعروض والمشاريع.</p>
+      </article>
+    </section>
+
+    <section class="printing-form">
+      <h2>نموذج طلب طباعة تجريبي</h2>
+      <p class="printing-note">
+        هذا النموذج للعرض فقط. لا يرفع ملفات ولا يرسل طلبًا حقيقيًا.
+      </p>
+
+      <label for="print-name">الاسم</label>
+      <input id="print-name" type="text" placeholder="اكتبي الاسم">
+
+      <label for="print-type">نوع الخدمة</label>
+      <select id="print-type">
+        <option value="مستندات">طباعة مستندات</option>
+        <option value="مذكرات">طباعة مذكرات ومحاضرات</option>
+        <option value="مشاريع">طباعة مشاريع جامعية</option>
+      </select>
+
+      <label for="print-pages">عدد الصفحات التقريبي</label>
+      <input id="print-pages" type="number" min="1" placeholder="مثال: 20">
+
+      <label for="print-notes">ملاحظات إضافية</label>
+      <textarea id="print-notes" rows="3"
+        placeholder="مثال: أبيض وأسود أو ملون"></textarea>
+
+      <button class="printing-button" type="button"
+        onclick="alert('شكرًا لاهتمامك! هذا نموذج تجريبي فقط، ولم يتم إرسال أي طلب.')">
+        معاينة الطلب
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Uni Store | متجر الجامعة الذكي</p>
+    <p>احتياجاتك الجامعية… بطريقة أذكى.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
