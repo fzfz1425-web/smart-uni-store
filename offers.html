@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الباقات والعروض | Smart Uni Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .offers-hero {
+      padding: 48px 6%;
+      text-align: center;
+      background: #F2F2F2;
+    }
+    .offers-hero h1 { color: #2A4D8F; font-size: 34px; }
+    .bundle-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 22px;
+    }
+    .bundle-card {
+      background: white;
+      border: 1px solid #e5e8ef;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(42,77,143,.08);
+      display: flex;
+      flex-direction: column;
+    }
+    .bundle-top {
+      padding: 25px;
+      background: #2A4D8F;
+      color: white;
+      text-align: center;
+    }
+    .bundle-top span { font-size: 45px; }
+    .bundle-top h2 { margin: 8px 0 0; font-size: 22px; }
+    .bundle-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .bundle-body ul { padding-right: 20px; color: #555f70; }
+    .bundle-price {
+      font-size: 27px;
+      font-weight: 800;
+      color: #2A4D8F;
+      margin-top: auto;
+      padding: 10px 0;
+    }
+    .bundle-price small { font-size: 13px; color: #687386; }
+    .offer-button {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      padding: 12px;
+      background: #2A4D8F;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .featured-bundle { border: 2px solid #C9A86A; }
+    .featured-label {
+      display: inline-block;
+      background: #C9A86A;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .discount-box {
+      background: #18345f;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 22px;
+      margin-top: 45px;
+    }
+    .discount-box h2 { color: #C9A86A; }
+    .coupon {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 18px;
+      background: white;
+      color: #2A4D8F;
+      border: 2px dashed #C9A86A;
+      border-radius: 12px;
+      font-weight: 800;
+      direction: ltr;
+    }
+    .coupon button {
+      border: 0;
+      background: #2A4D8F;
+      color: white;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+    }
+    .note {
+      color: #687386;
+      font-size: 13px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    @media(max-width:700px) {
+      .bundle-grid { grid-template-columns: 1fr; }
+      .offers-hero h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store<small>متجر الجامعة الذكي</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة"
+      aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="offers.html">الباقات والعروض</a>
+      <a href="box.html">صندوق الطالبة</a>
+      <a href="printing.html">الطباعة السريعة</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="offers-hero">
+      <span class="eyebrow">SMART DEALS</span>
+      <h1>باقات ذكية لكل يوم جامعي ✨</h1>
+      <p>اختاري الباقة المناسبة ليومك، واجعلي استعدادك أسهل.</p>
+    </section>
+
+    <section class="section">
+      <div class="bundle-grid">
+        <article class="bundle-card">
+          <div class="bundle-top">
+            <span>📝</span>
+            <h2>باقة الاختبار</h2>
+            <p>استعدي بثقة</p>
+          </div>
+          <div class="bundle-body">
+            <ul>
+              <li>دفتر للملاحظات</li>
+              <li>أقلام ملونة</li>
+              <li>بطاقات مراجعة</li>
+              <li>لاصقات ملاحظات</li>
+            </ul>
+            <div class="bundle-price">59 ر.س <small>سعر تجريبي</small></div>
+            <button class="offer-button" data-id="exam-bundle"
+              data-name="باقة الاختبار" data-price="59">أضيفي الباقة للسلة</button>
+          </div>
+        </article>
+
+        <article class="bundle-card featured-bundle">
+          <div class="bundle-top">
+            <span class="featured-label">اختيار مميز</span>
+            <div><span>💻</span></div>
+            <h2>باقة المشروع</h2>
+            <p>نظّمي أفكارك ومهامك</p>
+          </div>
+          <div class="bundle-body">
+            <ul>
+              <li>دفتر تخطيط</li>
+              <li>أقلام تحديد</li>
+              <li>ملفات تنظيم</li>
+              <li>ملصقات للمشروع</li>
+            </ul>
+            <div class="bundle-price">79 ر.س <small>سعر تجريبي</small></div>
+            <button class="offer-button" data-id="project-bundle"
+              data-name="باقة المشروع" data-price="79">أضيفي الباقة للسلة</button>
+          </div>
+        </article>
+
+        <article class="bundle-card">
+          <div class="bundle-top">
+            <span>☕</span>
+            <h2>باقة المحاضرة الطويلة</h2>
+            <p>رفيقتك خلال اليوم</p>
+          </div>
+          <div class="bundle-body">
+            <ul>
+              <li>دفتر جيب</li>
+              <li>قلم للكتابة</li>
+              <li>وجبة خفيفة</li>
+              <li>ملصقات تحفيزية</li>
+            </ul>
+            <div class="bundle-price">39 ر.س <small>سعر تجريبي</small></div>
+            <button class="offer-button" data-id="lecture-bundle"
+              data-name="باقة المحاضرة الطويلة" data-price="39">أضيفي الباقة للسلة</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="discount-box">
+        <span>🎓 خصمك الجامعي</span>
+        <h2>أنتِ تستحقين مكافأة!</h2>
+        <p>جرّبي كود الخصم الطلابي في هذه النسخة التجريبية.</p>
+        <div class="coupon">
+          <span id="coupon-code">UNI10</span>
+          <button id="copy-coupon" type="button">نسخ الكود</button>
+        </div>
+        <p id="coupon-message" aria-live="polite">الكود للعرض التجريبي فقط، ولم يُربط بخصم فعلي.</p>
+      </div>
+
+      <p class="note">الأسعار والخصومات المعروضة تجريبية وقابلة للتعديل قبل إطلاق المتجر.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store<small>متجر الجامعة الذكي</small></span>
+    </a>
+    <p>رفيقتك الذكية في رحلتك الجامعية.</p>
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+    <small>© 2026 Smart Uni Store</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("copy-coupon").addEventListener("click", async () => {
+      const message = document.getElementById("coupon-message");
+      try {
+        await navigator.clipboard.writeText("UNI10");
+        message.textContent = "تم نسخ الكود. تذكري أنه تجريبي فقط.";
+      } catch {
+        message.textContent = "الكود هو UNI10. يمكنك تحديده ونسخه يدويًا.";
+      }
+    });
+  </script>
+</body>
+</html>
