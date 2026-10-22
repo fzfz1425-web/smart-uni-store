@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2A4D8F">
+  <title>من نحن | Smart Uni Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-page {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 24px;
+    }
+    .about-hero {
+      background: linear-gradient(135deg, #2A4D8F, #173466);
+      color: white;
+      padding: 36px 24px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .about-hero h1 { margin-top: 0; }
+    .about-hero p { line-height: 2; max-width: 720px; margin: auto; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .about-card {
+      background: #F2F2F2;
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .about-card h2 { color: #2A4D8F; font-size: 20px; }
+    .about-section {
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid #e1e1e1;
+      border-radius: 16px;
+      line-height: 2;
+    }
+    .about-section h2 { color: #2A4D8F; }
+    .about-highlight {
+      color: #70531f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store
+        <small>متجر الجامعة الذكي</small>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة"
+      aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="offers.html">الباقات والعروض</a>
+      <a href="box.html">صندوق الطالبة</a>
+      <a href="printing.html">الطباعة السريعة</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main class="about-page">
+    <section class="about-hero">
+      <div style="font-size:54px;">🎓</div>
+      <h1>من نحن؟</h1>
+      <p>
+        متجر الجامعة الذكي هو فكرة مشروع تهدف إلى جمع احتياجات الحياة
+        الجامعية في تجربة رقمية واحدة، تجمع بين سهولة الوصول إلى المنتجات
+        والخدمات والأفكار التي تساعد الطالب على تنظيم يومه الدراسي.
+      </p>
+    </section>
+
+    <section class="about-grid">
+      <article class="about-card">
+        <h2>💡 رؤيتنا</h2>
+        <p>تجربة جامعية أكثر سهولة وتنظيمًا من خلال خدمات ومنتجات قريبة من احتياجات الطلاب.</p>
+      </article>
+      <article class="about-card">
+        <h2>🎯 رسالتنا</h2>
+        <p>تقديم فكرة تجمع الأدوات الدراسية والباقات والخدمات الجامعية في واجهة بسيطة وواضحة.</p>
+      </article>
+      <article class="about-card">
+        <h2>✨ ما يميز الفكرة</h2>
+        <p>تنوع الخيارات، وسهولة التصفح، وإمكانية تطوير خدمات تلائم احتياجات المجتمع الجامعي.</p>
+      </article>
+    </section>
+
+    <section class="about-section">
+      <h2>ماذا يقدم المتجر؟</h2>
+      <p>تضم فكرة المتجر مجموعة من الأقسام، منها:</p>
+      <ul>
+        <li>أدوات الدراسة والتنظيم والمراجعة.</li>
+        <li>مستلزمات طلابية للاحتياجات اليومية.</li>
+        <li>هدايا جامعية وباقات تجمع منتجات متنوعة.</li>
+        <li>صندوق طلابي شهري مقترح.</li>
+        <li>خدمة طباعة سريعة مقترحة.</li>
+        <li>فكرة مستقبلية للنقاط والمكافآت والعروض.</li>
+      </ul>
+    </section>
+
+    <section class="about-section">
+      <h2>لمن صُممت الفكرة؟</h2>
+      <p>
+        تستهدف الفكرة طلاب وطالبات الجامعة، مع إمكانية تطوير الخيارات
+        بحسب احتياجاتهم وميزانياتهم، وجعل الوصول إلى المستلزمات الدراسية
+        أكثر تنظيمًا وسهولة.
+      </p>
+      <p class="about-highlight">
+        ملاحظة: الموقع الحالي نموذج تجريبي لعرض الفكرة، وليس متجرًا جاهزًا
+        لاستقبال المدفوعات أو تنفيذ الطلبات الفعلية.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Uni Store | متجر الجامعة الذكي</p>
+    <p>احتياجاتك الجامعية… بطريقة أذكى.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
