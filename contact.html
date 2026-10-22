@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2A4D8F">
+  <title>تواصل معنا | Smart Uni Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 24px;
+    }
+    .contact-hero {
+      background: linear-gradient(135deg, #2A4D8F, #173466);
+      color: white;
+      text-align: center;
+      padding: 32px 22px;
+      border-radius: 20px;
+    }
+    .contact-hero h1 { margin-top: 0; }
+    .contact-hero p { line-height: 1.9; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .contact-card {
+      background: #F2F2F2;
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .contact-card h2 { color: #2A4D8F; font-size: 20px; }
+    .contact-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+      padding: 24px;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+    }
+    .contact-form label { font-weight: bold; }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 12px;
+      margin-top: 7px;
+      border: 1px solid #bbb;
+      border-radius: 9px;
+      background: white;
+      font: inherit;
+    }
+    .contact-button {
+      padding: 13px 20px;
+      background: #C9A86A;
+      color: #1A1A1A;
+      border: 0;
+      border-radius: 10px;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .contact-note { color: #555; font-size: 14px; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store
+        <small>متجر الجامعة الذكي</small>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة"
+      aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="offers.html">الباقات والعروض</a>
+      <a href="box.html">صندوق الطالبة</a>
+      <a href="printing.html">الطباعة السريعة</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div style="font-size:54px;">💬</div>
+      <h1>تواصل معنا</h1>
+      <p>
+        لديك اقتراح لتطوير المتجر أو فكرة لخدمة جامعية جديدة؟
+        يسعدنا أن تساهم في تطوير الفكرة.
+      </p>
+    </section>
+
+    <section class="contact-grid">
+      <article class="contact-card">
+        <h2>📩 البريد الإلكتروني</h2>
+        <p>يمكن إضافة بريد المشروع هنا عند تحديد بريد التواصل الرسمي.</p>
+      </article>
+      <article class="contact-card">
+        <h2>🤝 اقتراحاتكم تهمنا</h2>
+        <p>نرحب بالأفكار التي تجعل تجربة الطلاب والطالبات أكثر سهولة.</p>
+      </article>
+    </section>
+
+    <form class="contact-form" id="contact-form">
+      <h2>أرسل اقتراحك التجريبي</h2>
+      <p class="contact-note">
+        هذا نموذج عرض فقط؛ لا يحفظ البيانات ولا يرسلها إلى أي جهة.
+      </p>
+
+      <label for="contact-name">الاسم</label>
+      <input id="contact-name" type="text" placeholder="اكتب اسمك" required>
+
+      <label for="contact-topic">موضوع الرسالة</label>
+      <select id="contact-topic">
+        <option value="اقتراح">اقتراح تطوير</option>
+        <option value="منتجات">اقتراح منتجات</option>
+        <option value="خدمات">اقتراح خدمات جامعية</option>
+        <option value="أخرى">موضوع آخر</option>
+      </select>
+
+      <label for="contact-message">الرسالة</label>
+      <textarea id="contact-message" rows="5"
+        placeholder="اكتب اقتراحك هنا..." required></textarea>
+
+      <button class="contact-button" type="submit">معاينة الرسالة</button>
+      <p id="contact-status" class="contact-note" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Uni Store | متجر الجامعة الذكي</p>
+    <p>احتياجاتك الجامعية… بطريقة أذكى.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("contact-status").textContent =
+        "تمت معاينة النموذج بنجاح. هذه نسخة تجريبية ولم تُرسل بياناتك.";
+    });
+  </script>
+</body>
+</html>
