@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2A4D8F">
+  <title>صندوق الطالبة | Smart Uni Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .box-page {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 24px;
+    }
+    .box-hero {
+      background: linear-gradient(135deg, #2A4D8F, #173466);
+      color: white;
+      padding: 36px 24px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .box-hero h1 { margin-top: 0; }
+    .box-hero p { line-height: 1.9; }
+    .box-emoji { font-size: 64px; }
+    .box-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .box-card {
+      background: #F2F2F2;
+      padding: 22px;
+      border-radius: 16px;
+    }
+    .box-card h2 { color: #2A4D8F; font-size: 20px; }
+    .box-price { font-size: 28px; font-weight: bold; color: #2A4D8F; }
+    .box-note { font-size: 14px; color: #555; }
+    .box-button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 22px;
+      border: 0;
+      border-radius: 10px;
+      background: #C9A86A;
+      color: #1A1A1A;
+      font: inherit;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store
+        <small>متجر الجامعة الذكي</small>
+      </span>
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة"
+      aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="offers.html">الباقات والعروض</a>
+      <a href="box.html">صندوق الطالبة</a>
+      <a href="printing.html">الطباعة السريعة</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main class="box-page">
+    <section class="box-hero">
+      <div class="box-emoji">🎁</div>
+      <h1>صندوق الطالبة الجامعية</h1>
+      <p>
+        صندوق شهري يجمع احتياجاتك الدراسية ولمساتك اليومية في مكان واحد،
+        ليجعل تجربتك الجامعية أكثر تنظيمًا ومتعة.
+      </p>
+    </section>
+
+    <section class="box-details">
+      <article class="box-card">
+        <h2>📚 أدوات دراسية</h2>
+        <p>دفتر للملاحظات، وأقلام، وبطاقات للمراجعة وتنظيم الأفكار.</p>
+      </article>
+
+      <article class="box-card">
+        <h2>☕ لمسات يومية</h2>
+        <p>إضافة لطيفة مثل كوب أو بطاقة تحفيزية لترافق يومك الجامعي.</p>
+      </article>
+
+      <article class="box-card">
+        <h2>🍪 استراحة خفيفة</h2>
+        <p>اقتراحات لوجبات خفيفة مناسبة للاستراحة بين المحاضرات.</p>
+      </article>
+    </section>
+
+    <section class="box-card" style="margin-top:24px; text-align:center;">
+      <h2>الصندوق الشهري التجريبي</h2>
+      <p>محتويات متنوعة تتغير حسب احتياجات الطالبة.</p>
+      <p class="box-price">99 ر.س</p>
+      <p class="box-note">
+        سعر توضيحي للمشروع فقط، وليس سعرًا نهائيًا.
+        لا يوجد اشتراك متكرر أو دفع حقيقي في هذه النسخة التجريبية.
+      </p>
+      <button class="box-button" type="button"
+        onclick="alert('هذه نسخة تجريبية للعرض فقط، ولا يتم إنشاء اشتراك أو دفع حقيقي.')">
+        اكتشفي الصندوق
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Uni Store | متجر الجامعة الذكي</p>
+    <p>احتياجاتك الجامعية… بطريقة أذكى.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
