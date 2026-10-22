@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>المنتجات | Smart Uni Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .products-intro {
+      padding: 45px 6%;
+      background: #F2F2F2;
+      text-align: center;
+    }
+    .products-intro h1 { color: #2A4D8F; }
+    .products-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    .products-toolbar input,
+    .products-toolbar select {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: white;
+      min-width: 0;
+    }
+    .products-toolbar input { flex: 1; }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      border: 1px solid #e7eaf0;
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 8px 25px rgba(42,77,143,.07);
+      display: flex;
+      flex-direction: column;
+      background: white;
+    }
+    .product-picture {
+      height: 135px;
+      display: grid;
+      place-items: center;
+      background: #F2F2F2;
+      border-radius: 14px;
+      font-size: 55px;
+    }
+    .product-card h2 {
+      color: #2A4D8F;
+      font-size: 19px;
+      margin-bottom: 4px;
+    }
+    .product-card p {
+      color: #687386;
+      font-size: 14px;
+      flex: 1;
+    }
+    .product-price {
+      color: #2A4D8F;
+      font-size: 20px;
+      font-weight: 800;
+      margin: 8px 0 12px;
+    }
+    .add-cart {
+      background: #2A4D8F;
+      color: white;
+      border: 0;
+      padding: 11px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .add-cart:hover { background: #18345f; }
+    .product-tag {
+      color: #80602e;
+      background: #f7eedc;
+      border-radius: 20px;
+      padding: 4px 10px;
+      font-size: 12px;
+      align-self: flex-start;
+    }
+    .empty-results {
+      text-align: center;
+      padding: 30px;
+      color: #687386;
+      display: none;
+    }
+    @media (max-width: 700px) {
+      .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+      .product-card { padding: 12px; }
+      .product-picture { height: 105px; }
+      .products-toolbar { align-items: stretch; }
+      .products-toolbar select { width: 100%; }
+    }
+    @media (max-width: 360px) {
+      .product-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store<small>متجر الجامعة الذكي</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="فتح القائمة"
+      aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav id="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="products.html">المنتجات</a>
+      <a href="offers.html">الباقات والعروض</a>
+      <a href="box.html">صندوق الطالبة</a>
+      <a href="printing.html">الطباعة السريعة</a>
+      <a href="about.html">من نحن</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="products-intro">
+      <span class="eyebrow">SMART SHOPPING</span>
+      <h1>تسوّقي بذكاء ✨</h1>
+      <p>اكتشفي مستلزماتك الجامعية في مكان واحد.</p>
+    </section>
+
+    <section class="section">
+      <div class="products-toolbar">
+        <input id="product-search" type="search"
+          placeholder="ابحثي عن منتج..." aria-label="البحث عن منتج">
+        <select id="category-filter" aria-label="تصفية حسب القسم">
+          <option value="all">كل الأقسام</option>
+          <option value="study">أدوات الدراسة الذكية</option>
+          <option value="rescue">إنقاذ الطالب</option>
+          <option value="gifts">الهدايا الجامعية</option>
+          <option value="snacks">الوجبات الخفيفة</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-category="study" data-name="دفتر ذكي قابل للمسح">
+          <div class="product-picture">📓</div>
+          <span class="product-tag">أدوات الدراسة</span>
+          <h2>دفتر ذكي قابل للمسح</h2>
+          <p>دفتر لإعادة استخدام صفحات الملاحظات وتنظيم الدراسة.</p>
+          <div class="product-price">45 ر.س</div>
+          <button class="add-cart" data-id="smart-notebook" data-name="دفتر ذكي قابل للمسح" data-price="45">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="study" data-name="أقلام ملونة">
+          <div class="product-picture">🖍️</div>
+          <span class="product-tag">أدوات الدراسة</span>
+          <h2>أقلام ملونة</h2>
+          <p>لتنسيق الملاحظات وتمييز المعلومات المهمة.</p>
+          <div class="product-price">18 ر.س</div>
+          <button class="add-cart" data-id="color-pens" data-name="أقلام ملونة" data-price="18">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="study" data-name="بطاقات فلاش كارد">
+          <div class="product-picture">🗂️</div>
+          <span class="product-tag">أدوات الدراسة</span>
+          <h2>بطاقات فلاش كارد</h2>
+          <p>بطاقات للمراجعة والحفظ والاستذكار.</p>
+          <div class="product-price">20 ر.س</div>
+          <button class="add-cart" data-id="flashcards" data-name="بطاقات فلاش كارد" data-price="20">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="rescue" data-name="شاحن متنقل">
+          <div class="product-picture">🔋</div>
+          <span class="product-tag">إنقاذ الطالب</span>
+          <h2>شاحن متنقل</h2>
+          <p>خيار عملي لأيام الجامعة الطويلة.</p>
+          <div class="product-price">65 ر.س</div>
+          <button class="add-cart" data-id="power-bank" data-name="شاحن متنقل" data-price="65">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="rescue" data-name="مستلزمات مكتبية">
+          <div class="product-picture">✏️</div>
+          <span class="product-tag">إنقاذ الطالب</span>
+          <h2>مستلزمات مكتبية</h2>
+          <p>أقلام وممحاة ومسطرة للاحتياجات اليومية.</p>
+          <div class="product-price">15 ر.س</div>
+          <button class="add-cart" data-id="stationery-kit" data-name="مستلزمات مكتبية" data-price="15">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="gifts" data-name="كوب تحفيزي">
+          <div class="product-picture">☕</div>
+          <span class="product-tag">الهدايا الجامعية</span>
+          <h2>كوب تحفيزي</h2>
+          <p>هدية لطيفة بعبارة تشجّع على الإنجاز.</p>
+          <div class="product-price">35 ر.س</div>
+          <button class="add-cart" data-id="motivational-mug" data-name="كوب تحفيزي" data-price="35">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="gifts" data-name="ستيكرات التخصصات">
+          <div class="product-picture">🌟</div>
+          <span class="product-tag">الهدايا الجامعية</span>
+          <h2>ستيكرات التخصصات</h2>
+          <p>ملصقات مرحة لتزيين الدفاتر والأجهزة.</p>
+          <div class="product-price">12 ر.س</div>
+          <button class="add-cart" data-id="major-stickers" data-name="ستيكرات التخصصات" data-price="12">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="snacks" data-name="سناك صحي">
+          <div class="product-picture">🥜</div>
+          <span class="product-tag">وجبات خفيفة</span>
+          <h2>سناك صحي</h2>
+          <p>وجبة خفيفة مناسبة للاستراحة بين المحاضرات.</p>
+          <div class="product-price">10 ر.س</div>
+          <button class="add-cart" data-id="healthy-snack" data-name="سناك صحي" data-price="10">أضيفي إلى السلة</button>
+        </article>
+
+        <article class="product-card" data-category="snacks" data-name="قهوة جاهزة">
+          <div class="product-picture">☕</div>
+          <span class="product-tag">وجبات خفيفة</span>
+          <h2>قهوة جاهزة</h2>
+          <p>قهوة لوقت الاستراحة أثناء اليوم الدراسي.</p>
+          <div class="product-price">12 ر.س</div>
+          <button class="add-cart" data-id="ready-coffee" data-name="قهوة جاهزة" data-price="12">أضيفي إلى السلة</button>
+        </article>
+      </div>
+      <p id="empty-results" class="empty-results">لم نعثر على منتجات مطابقة لبحثك.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="index.html">
+      <span class="brand-icon">✦</span>
+      <span>Smart Uni Store<small>متجر الجامعة الذكي</small></span>
+    </a>
+    <p>رفيقتك الذكية في رحلتك الجامعية.</p>
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="offers.html">العروض</a>
+      <a href="contact.html">تواصل معنا</a>
+    </div>
+    <small>© 2026 Smart Uni Store</small>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const searchInput = document.getElementById("product-search");
+    const categoryFilter = document.getElementById("category-filter");
+    const productCards = [...document.querySelectorAll(".product-card")];
+    const emptyResults = document.getElementById("empty-results");
+
+    const params = new URLSearchParams(window.location.search);
+    const initialCategory = params.get("category");
+    if (["study", "rescue", "gifts", "snacks"].includes(initialCategory)) {
+      categoryFilter.value = initialCategory;
+    }
+
+    function filterProducts() {
+      const query = searchInput.value.trim().toLowerCase();
+      const category = categoryFilter.value;
+      let visible = 0;
+
+      productCards.forEach(card => {
+        const matchesName = card.dataset.name.toLowerCase().includes(query);
+        const matchesCategory = category === "all" || card.dataset.category === category;
+        card.hidden = !(matchesName && matchesCategory);
+        if (!card.hidden) visible++;
+      });
+
+      emptyResults.style.display = visible ? "none" : "block";
+    }
+
+    searchInput.addEventListener("input", filterProducts);
+    categoryFilter.addEventListener("change", filterProducts);
+    filterProducts();
+  </script>
+</body>
+</html>
