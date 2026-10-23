@@ -7,13 +7,14 @@
   <meta name="theme-color" content="#2A4D8F">
   <title>Smart Uni Store | متجر الجامعة الذكي</title>
   <meta name="description" content="وجهتك الجامعية الذكية للأدوات الدراسية والمستلزمات والهدايا.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="Smart Uni Store الرئيسية">
       <img src="IMG_2019.jpeg" alt="شعار Smart Uni Store" class="brand-logo">
@@ -25,8 +26,7 @@
 
     <div class="header-actions">
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="تغيير المظهر" title="الوضع الداكن أو الفاتح">🌙</button>
-      <button class="menu-toggle" type="button" aria-label="فتح القائمة"
-        aria-expanded="false" aria-controls="main-nav">☰</button>
+      <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="main-nav">☰</button>
     </div>
 
     <nav id="main-nav">
@@ -41,6 +41,7 @@
   </header>
 
   <main>
+    <!-- الواجهة الرئيسية -->
     <section class="hero">
       <div class="hero-content">
         <span class="eyebrow">YOUR SMART CAMPUS COMPANION</span>
@@ -73,6 +74,7 @@
       </div>
     </section>
 
+    <!-- الأقسام -->
     <section class="section">
       <div class="section-heading">
         <span class="section-kicker">EXPLORE YOUR WORLD</span>
@@ -123,6 +125,112 @@
       </div>
     </section>
 
+    <!-- المنتجات -->
+    <section class="section products-section" id="featured-products">
+      <div class="section-heading">
+        <span class="section-kicker">YOUR CAMPUS ESSENTIALS</span>
+        <h2>اختياراتك <span>الجامعية.</span></h2>
+        <p>تصفحي مستلزماتك المفضلة واجعلي يومك أكثر تنظيمًا.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="IMG_2030.jpeg" alt="استكرات جامعية" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">الهدايا والملصقات</span>
+            <h3>استكرات</h3>
+            <p>لمسات مرحة لتزيين دفاترك وأغراضك.</p>
+            <button class="add-cart" data-id="stickers" data-name="استكرات" data-price="10">أضيفي للسلة · 10 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_2029.jpeg" alt="دفتر جامعي" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">أدوات الدراسة</span>
+            <h3>دفتر</h3>
+            <p>لتدوين ملاحظاتك وتنظيم أفكارك.</p>
+            <button class="add-cart" data-id="notebook" data-name="دفتر" data-price="15">أضيفي للسلة · 15 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_2028.jpeg" alt="أقلام للكتابة" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">أدوات الدراسة</span>
+            <h3>أقلام</h3>
+            <p>رفيقتك في المحاضرات والمذاكرة.</p>
+            <button class="add-cart" data-id="pens" data-name="أقلام" data-price="8">أضيفي للسلة · 8 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_2027.jpeg" alt="شاحن للأجهزة" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">المستلزمات الأساسية</span>
+            <h3>شاحن</h3>
+            <p>للاستعداد ليومك الجامعي.</p>
+            <button class="add-cart" data-id="charger" data-name="شاحن" data-price="35">أضيفي للسلة · 35 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_2026.jpeg" alt="قهوة جاهزة" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">استراحة الجامعة</span>
+            <h3>قهوة جاهزة</h3>
+            <p>استراحة لطيفة بين المحاضرات.</p>
+            <button class="add-cart" data-id="ready-coffee" data-name="قهوة جاهزة" data-price="12">أضيفي للسلة · 12 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_2025.jpeg" alt="وجبات خفيفة" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">استراحة الجامعة</span>
+            <h3>سناك</h3>
+            <p>وجبة خفيفة لوقت الاستراحة.</p>
+            <button class="add-cart" data-id="snack" data-name="سناك" data-price="7">أضيفي للسلة · 7 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_2024.jpeg" alt="مستلزمات مكتبية" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">التنظيم والدراسة</span>
+            <h3>مستلزمات مكتبية</h3>
+            <p>أدوات عملية لتنظيم مساحة دراستك.</p>
+            <button class="add-cart" data-id="office-supplies" data-name="مستلزمات مكتبية" data-price="20">أضيفي للسلة · 20 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_2023.jpeg" alt="بطاقات فلاش كارد تعليمية" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">أدوات الدراسة</span>
+            <h3>بطاقات فلاش كارد</h3>
+            <p>ساعدي نفسك على مراجعة المعلومات.</p>
+            <button class="add-cart" data-id="flash-cards" data-name="بطاقات فلاش كارد" data-price="12">أضيفي للسلة · 12 ر.س</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="IMG_1833.jpeg" alt="كوب تحفيزي" loading="lazy">
+          <div class="product-info">
+            <span class="product-category">الهدايا الجامعية</span>
+            <h3>كوب تحفيزي</h3>
+            <p>لمسة جميلة ترافق يومك الجامعي.</p>
+            <button class="add-cart" data-id="motivational-mug" data-name="كوب تحفيزي" data-price="30">أضيفي للسلة · 30 ر.س</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-more">
+        <a class="btn btn-gold" href="products.html">عرض جميع المنتجات ←</a>
+      </div>
+    </section>
+
+    <!-- الباقات والعروض -->
     <section class="section offers-section">
       <div class="section-heading">
         <span class="section-kicker">SMART PICKS FOR YOU</span>
@@ -157,6 +265,7 @@
       </div>
     </section>
 
+    <!-- صندوق الطالبة -->
     <section class="student-box">
       <div class="student-box-content">
         <span class="section-kicker">A LITTLE SURPRISE FOR YOU</span>
@@ -164,6 +273,7 @@
         <p>اكتشفي صندوق الطالبة الجامعية، بفكرة تجمع أدوات الدراسة واللمسات اللطيفة في تجربة واحدة.</p>
         <a class="btn btn-light" href="box.html">اكتشفي الصندوق ←</a>
       </div>
+
       <div class="box-illustration" aria-hidden="true">
         <span class="box-glow"></span>
         <span class="box-emoji">🎁</span>
@@ -172,17 +282,20 @@
       </div>
     </section>
 
+    <!-- مميزات المتجر -->
     <section class="section benefits">
       <div class="benefit-card">
         <span>✦</span>
         <h3>اختيارات ذكية</h3>
         <p>أقسام متنوعة لاحتياجات الحياة الجامعية.</p>
       </div>
+
       <div class="benefit-card">
         <span>◇</span>
         <h3>عروض وباقات</h3>
         <p>أفكار تجمع مستلزماتك في باقات مميزة.</p>
       </div>
+
       <div class="benefit-card">
         <span>↗</span>
         <h3>تجربة بسيطة</h3>
@@ -190,6 +303,7 @@
       </div>
     </section>
 
+    <!-- الدعوة الختامية -->
     <section class="closing-banner">
       <span class="section-kicker">YOUR CAMPUS. YOUR STYLE.</span>
       <h2>ابدئي فصلًا جامعيًا <span>أكثر ذكاءً.</span></h2>
