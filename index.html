@@ -6,30 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#2A4D8F">
   <title>Smart Uni Store | متجر الجامعة الذكي</title>
-  <meta name="description" content="كل ما تحتاجينه في رحلتك الجامعية في مكان واحد.">
+  <meta name="description" content="وجهتك الجامعية الذكية للأدوات الدراسية والمستلزمات والهدايا.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="brand-icon">✦</span>
-      <span>Smart Uni Store
+    <a class="brand" href="index.html" aria-label="Smart Uni Store الرئيسية">
+      <img src="IMG_2019.jpeg" alt="شعار Smart Uni Store" class="brand-logo">
+      <span class="brand-text">
+        <strong>Smart Uni Store</strong>
         <small>متجر الجامعة الذكي</small>
       </span>
     </a>
-    <button class="menu-toggle" aria-label="فتح القائمة"
-      aria-expanded="false" aria-controls="main-nav">☰</button>
+
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="تغيير المظهر" title="الوضع الداكن أو الفاتح">🌙</button>
+      <button class="menu-toggle" type="button" aria-label="فتح القائمة"
+        aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+
     <nav id="main-nav">
-      <a href="index.html">الرئيسية</a>
+      <a href="index.html" aria-current="page">الرئيسية</a>
       <a href="products.html">المنتجات</a>
       <a href="offers.html">الباقات والعروض</a>
       <a href="box.html">صندوق الطالبة</a>
       <a href="about.html">من نحن</a>
       <a href="contact.html">تواصل معنا</a>
-      <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
+      <a href="cart.html" class="cart-link">🛒 السلة <span id="cart-count">0</span></a>
     </nav>
   </header>
 
@@ -37,100 +44,177 @@
     <section class="hero">
       <div class="hero-content">
         <span class="eyebrow">YOUR SMART CAMPUS COMPANION</span>
-        <h1>كل ما تحتاجينه في رحلتك الجامعية...</h1>
-        <h2>في مكان واحد!</h2>
-        <p>أدوات دراسة ذكية، مستلزمات جامعية، هدايا وخدمات توفر وقتك وتسهّل يومك.</p>
-        <a class="btn btn-gold" href="products.html">تسوّقي الآن ←</a>
+        <h1>جامعتك، بطريقتك.<br><span>يومك أذكى.</span></h1>
+        <p>كل ما تحتاجينه في رحلتك الجامعية؛ أدوات دراسة، مستلزمات، هدايا وباقات صُممت لتجعل يومك أسهل وأكثر إلهامًا.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="products.html">اكتشفي المنتجات <span>←</span></a>
+          <a class="hero-secondary" href="offers.html">استكشفي الباقات ↗</a>
+        </div>
+
+        <div class="hero-highlights">
+          <span>✦ احتياجات في مكان واحد</span>
+          <span>✦ تجربة سهلة</span>
+          <span>✦ اختيارات طلابية</span>
+        </div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <span>📚</span><span>☕</span><span>✏️</span>
-        <div>Study smart.<br>Dream big.</div>
+
+      <div class="hero-art" aria-label="أدوات الدراسة الجامعية">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-product product-book">📚</div>
+        <div class="hero-product product-coffee">☕</div>
+        <div class="hero-product product-pencil">✏️</div>
+        <div class="hero-sticker">STUDY<br>SMART.</div>
+        <div class="hero-art-caption">
+          <span>YOUR NEXT CHAPTER</span>
+          <strong>Dream big. Start here.</strong>
+        </div>
       </div>
     </section>
 
     <section class="section">
       <div class="section-heading">
-        <span>اكتشفي</span>
-        <h2>أقسام المتجر</h2>
-        <p>كل احتياجاتك الجامعية تجمعها لكِ وجهة واحدة.</p>
+        <span class="section-kicker">EXPLORE YOUR WORLD</span>
+        <h2>كل شيء يبدأ من <span>هنا.</span></h2>
+        <p>اختاري القسم المناسب لكِ، واجعلي يومك الجامعي أكثر تنظيمًا.</p>
       </div>
+
       <div class="category-grid">
         <a class="category-card" href="products.html">
-          <span>📚</span><h3>أدوات الدراسة الذكية</h3>
-          <p>دفاتر وأقلام وبطاقات تعليمية</p>
+          <span class="category-icon">📚</span>
+          <span class="category-number">01 / STUDY</span>
+          <h3>أدوات الدراسة</h3>
+          <p>دفاتر، أقلام وبطاقات تعليمية لتنظيم أفكارك.</p>
+          <span class="card-arrow">↗</span>
         </a>
+
         <a class="category-card" href="products.html?category=rescue">
-          <span>⚡</span><h3>إنقاذ الطالب</h3>
-          <p>مستلزمات الطوارئ الجامعية</p>
+          <span class="category-icon">⚡</span>
+          <span class="category-number">02 / ESSENTIALS</span>
+          <h3>إنقاذ الطالب</h3>
+          <p>مستلزمات تساعدك في المواقف الجامعية المفاجئة.</p>
+          <span class="card-arrow">↗</span>
         </a>
+
         <a class="category-card" href="products.html?category=gifts">
-          <span>🎁</span><h3>الهدايا الجامعية</h3>
-          <p>هدايا وبطاقات وملصقات</p>
+          <span class="category-icon">🎁</span>
+          <span class="category-number">03 / GIFTS</span>
+          <h3>الهدايا الجامعية</h3>
+          <p>لمسات لطيفة وملصقات وبطاقات للمناسبات.</p>
+          <span class="card-arrow">↗</span>
         </a>
+
         <a class="category-card" href="printing.html">
-          <span>🖨️</span><h3>الطباعة السريعة</h3>
-          <p>خدمات طباعة وتغليف</p>
+          <span class="category-icon">🖨️</span>
+          <span class="category-number">04 / PRINT</span>
+          <h3>الطباعة والتغليف</h3>
+          <p>خدمات تساعدك على تجهيز أوراقك ومشاريعك.</p>
+          <span class="card-arrow">↗</span>
         </a>
+
         <a class="category-card" href="products.html?category=snacks">
-          <span>☕</span><h3>الوجبات الخفيفة</h3>
-          <p>استراحات صغيرة خلال يومك</p>
+          <span class="category-icon">☕</span>
+          <span class="category-number">05 / BREAK TIME</span>
+          <h3>استراحة الجامعة</h3>
+          <p>اختيارات خفيفة تضيف لمسة لطيفة إلى يومك.</p>
+          <span class="card-arrow">↗</span>
         </a>
       </div>
     </section>
 
     <section class="section offers-section">
       <div class="section-heading">
-        <span>اختيارات ذكية</span>
-        <h2>باقات تناسب يومك</h2>
+        <span class="section-kicker">SMART PICKS FOR YOU</span>
+        <h2>باقات على <span>مقاس يومك.</span></h2>
+        <p>أفكار تجمع احتياجاتك في خيارات عملية ومميزة.</p>
       </div>
+
       <div class="offer-grid">
         <article class="offer-card">
-          <span>📝</span><h3>باقة الاختبار</h3>
-          <p>كل ما تحتاجينه لجلسة مذاكرة منظمة.</p>
-          <a href="offers.html">اكتشفي الباقة ←</a>
+          <span class="offer-number">01</span>
+          <div class="offer-icon">📝</div>
+          <h3>باقة الاختبار</h3>
+          <p>رتّبي جلسة المذاكرة بأدواتك الأساسية.</p>
+          <a href="offers.html">اكتشفي الباقة <span>←</span></a>
         </article>
+
         <article class="offer-card">
-          <span>💻</span><h3>باقة المشروع</h3>
-          <p>مستلزمات تساعدك على ترتيب مشروعك.</p>
-          <a href="offers.html">اكتشفي الباقة ←</a>
+          <span class="offer-number">02</span>
+          <div class="offer-icon">💻</div>
+          <h3>باقة المشروع</h3>
+          <p>كل ما يساعدك على التخطيط والتنظيم والإنجاز.</p>
+          <a href="offers.html">اكتشفي الباقة <span>←</span></a>
         </article>
+
         <article class="offer-card">
-          <span>☕</span><h3>باقة المحاضرة الطويلة</h3>
-          <p>رفيقات يومك الدراسي في باقة واحدة.</p>
-          <a href="offers.html">اكتشفي الباقة ←</a>
+          <span class="offer-number">03</span>
+          <div class="offer-icon">☕</div>
+          <h3>باقة المحاضرة</h3>
+          <p>رفيقات يومك الطويل في اختيار واحد.</p>
+          <a href="offers.html">اكتشفي الباقة <span>←</span></a>
         </article>
       </div>
     </section>
 
     <section class="student-box">
-      <div>
-        <span>🎀 صندوق المفاجآت الجامعية</span>
-        <h2>صندوق الطالبة الجامعية</h2>
-        <p>أدوات دراسة، ملصقات، وجبة خفيفة وهدية صغيرة كل شهر.</p>
-        <a class="btn btn-light" href="box.html">اكتشفي الصندوق</a>
+      <div class="student-box-content">
+        <span class="section-kicker">A LITTLE SURPRISE FOR YOU</span>
+        <h2>يومك الجامعي يستحق <span>مفاجأة.</span></h2>
+        <p>اكتشفي صندوق الطالبة الجامعية، بفكرة تجمع أدوات الدراسة واللمسات اللطيفة في تجربة واحدة.</p>
+        <a class="btn btn-light" href="box.html">اكتشفي الصندوق ←</a>
       </div>
-      <div class="box-illustration" aria-hidden="true">🎁</div>
+      <div class="box-illustration" aria-hidden="true">
+        <span class="box-glow"></span>
+        <span class="box-emoji">🎁</span>
+        <span class="box-sparkle sparkle-one">✦</span>
+        <span class="box-sparkle sparkle-two">✧</span>
+      </div>
     </section>
 
     <section class="section benefits">
-      <div><span>⭐</span><h3>نقاط المكافآت</h3><p>تصوّر تجريبي لنقاط مع كل عملية شراء.</p></div>
-      <div><span>🏷️</span><h3>خصومات طلابية</h3><p>عروض وأكواد خصم مخصصة للطلاب.</p></div>
-      <div><span>💙</span><h3>تجربة سهلة</h3><p>تصفحي أقسام المتجر بسهولة.</p></div>
+      <div class="benefit-card">
+        <span>✦</span>
+        <h3>اختيارات ذكية</h3>
+        <p>أقسام متنوعة لاحتياجات الحياة الجامعية.</p>
+      </div>
+      <div class="benefit-card">
+        <span>◇</span>
+        <h3>عروض وباقات</h3>
+        <p>أفكار تجمع مستلزماتك في باقات مميزة.</p>
+      </div>
+      <div class="benefit-card">
+        <span>↗</span>
+        <h3>تجربة بسيطة</h3>
+        <p>تنقلي بين الأقسام والمنتجات بسهولة.</p>
+      </div>
+    </section>
+
+    <section class="closing-banner">
+      <span class="section-kicker">YOUR CAMPUS. YOUR STYLE.</span>
+      <h2>ابدئي فصلًا جامعيًا <span>أكثر ذكاءً.</span></h2>
+      <a class="btn btn-gold" href="products.html">تصفحي المتجر الآن ←</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <a class="brand footer-brand" href="index.html">
-      <span class="brand-icon">✦</span>
-      <span>Smart Uni Store<small>متجر الجامعة الذكي</small></span>
+      <img src="IMG_2019.jpeg" alt="شعار Smart Uni Store" class="brand-logo">
+      <span class="brand-text">
+        <strong>Smart Uni Store</strong>
+        <small>متجر الجامعة الذكي</small>
+      </span>
     </a>
+
     <p>رفيقتك الذكية في رحلتك الجامعية.</p>
+
     <div class="footer-links">
       <a href="products.html">المنتجات</a>
       <a href="offers.html">العروض</a>
       <a href="about.html">من نحن</a>
       <a href="contact.html">تواصل معنا</a>
     </div>
+
     <small>© 2026 Smart Uni Store — جميع الحقوق محفوظة.</small>
   </footer>
 
