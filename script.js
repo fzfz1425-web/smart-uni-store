@@ -84,3 +84,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateCartCount();
 });
+
+  // تبديل الوضع الداكن والفاتح
+  const themeToggle = document.getElementById("theme-toggle");
+
+  // استعادة المظهر المحفوظ
+  const savedTheme = localStorage.getItem("smartUniTheme");
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+
+  // تحديث شكل زر المظهر
+  function updateThemeButton() {
+    if (!themeToggle) return;
+
+    const isDark = document.body.classList.contains("dark-mode");
+
+    themeToggle.textContent = isDark ? "☀️" : "🌙";
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "تفعيل الوضع الفاتح" : "تفعيل الوضع الداكن"
+    );
+  }
+
+  updateThemeButton();
+
+  // التبديل عند الضغط على الزر
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      const isDark = document.body.classList.contains("dark-mode");
+
+      localStorage.setItem("smartUniTheme", isDark ? "dark" : "light");
+
+      updateThemeButton();
+    });
+  }
